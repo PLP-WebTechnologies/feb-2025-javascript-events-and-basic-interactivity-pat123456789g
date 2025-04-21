@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+    }
+    .preview {
+      margin-top: 1rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Register</h1>
+  <form id="registerForm">
+    <label>Name: <input type="text" id="name" required></label><br><br>
+    <label>Email: <input type="email" id="email" required></label><br><br>
+    <label>Password: 
+      <input type="password" id="password" required>
+      <button type="button" id="togglePassword">Show</button>
+    </label><br><br>
+    <button type="submit">Submit</button>
+    <p class="error" id="errorMsg"></p>
+  </form>
+
+  <div class="preview" id="previewBox" style="display:none;">
+    <h2>Preview</h2>
+    <p><strong>Name:</strong> <span id="previewName"></span></p>
+    <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
